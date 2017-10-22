@@ -4,7 +4,7 @@
 I	II	III	IV	V	VI	VII	VIII	IX	X	XX	XXX	XL	L	LX	LXX	LXXX    XC	C	CC	CCC	CD	D	DC	DCC	DCCC	CM   M
 */
 
-// "Tranlate" button click event
+// "Translate" button click event
 $('#convert').click(function(e){
 
     // get inserted Roman value
