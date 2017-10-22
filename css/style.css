@@ -1,0 +1,35 @@
+
+/* override default Bootstrap jumbotron's css */
+.jumbotron {
+    margin: 2em 0;
+    padding: 2em;
+}
+
+/* helper css class for a clean-code styling */ 
+.display-none {
+    display: none;
+}
+
+
+/* OVERRIDE MOCHA'S CSS - START */
+#mocha-stats {
+    /* default is relative with top: 15px and right:10px so it overlays in the top right of the page over my app */
+    position: static;   
+}
+/* canvas with the result's success percentage */
+.progress {
+    background-color: inherit;  /* overrides the #eceeef; to inheriting from body (white) */
+}
+/* single unit test's text */
+#mocha h2 {
+    font-size: 14px;    /* default is too small (12px) */
+    text-align: left;   /* if tests' text is different - for example a short one and another long one - it's ugly to see beacurse it's not aligned - default is center */
+    margin-left: 20px;  /* since at the left there is the "check" content, increase the margin so it has more space between the check and the result text - deafult is zero */
+}
+#mocha {
+    margin: 30px;   /* default is 60px */
+}
+#mocha h1 {
+    margin: 15px auto;
+}
+/* OVERRIDE MOCHA'S CSS - END */

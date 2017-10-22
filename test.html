@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Romand to Arabic number converter</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Romand to Arabic number converter">
+        <meta name="keywords" content="HTML,CSS,XML,JavaScript,Roman,Arabic,Converter,Gianluca,Baldin">
+        <meta name="author" content="Gianluca Baldin">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstap's css -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+        <!-- Mocha's css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+        <!-- import custom css file -->
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <!-- use Bootstrap container / grid / alignement classes -->
+        <div class="container text-center">
+            <div class="jumbotron">
+                <!-- intro -->
+                <h1 class="display-3">Roman to Arabic converter</h1>
+                <p class="lead">This is a simple algortim given a number in Roman format converts it into Arabic format</p>
+                <hr class="my-4">
+                <p>Click on the "Convert" button below to have the conversion or click on "Test with Mocha" to test the translator function through a couple of pre-built Mocha's Assestions</p>
+                <!-- form -->
+                <form>
+                    <div class="form-group">
+                        <!-- roman input to be converted -->
+                        <div class="form-group row justify-content-center">
+                            <label for="example-text-input" class="col-2 col-form-label">Roman number</label>
+                            <div class="col-6">
+                                <input class="form-control" type="text" placeholder="XCIX" id="toConvert">
+                            </div>
+                        </div>
+                        <!-- arabic input converted after execution -->
+                        <div class="form-group row justify-content-center">
+                            <label for="example-text-input" class="col-2 col-form-label" disabled>Arabic number</label>
+                            <div class="col-6">
+                                <input class="form-control" type="text" id="converted">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- actions buttons -->
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                            <button type="button" class="btn btn-primary" id="convert">Convert</button>
+                        </div>
+                        <div class="col-4">
+                            <button type="button" class="btn btn-primary" id="test-mocha">Test with Mocha</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- (eventual) error message -->
+            <div class="alert alert-danger display-none" role="alert" id="error">
+                <div id="errorText"></div>
+            </div>
+
+            <!-- Mocha's results container -->
+            <div class="row justify-content-center">
+                <div id="mocha"></div>
+            </div>
+
+        </div>
+
+        <!-- jQuery (plus Tether) and Bootstrap through CDN -->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+        <!-- Mocha / Chai js library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+        <!-- Mocha/Chai's tests script -->
+        <script src="js/mochaUnitTest.js"></script>
+
+        <!-- application JS code -->
+        <script src="js/script.js"></script>
+
+    </body>
+</html>
